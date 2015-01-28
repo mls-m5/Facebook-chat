@@ -1,6 +1,6 @@
 #Facebook chat
 
-A program that removes disturmances from your chat experience
+A program that removes disturbances from your chat experience
 
 
 It does this
