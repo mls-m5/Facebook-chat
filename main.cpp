@@ -11,7 +11,7 @@ QWebView *pubView;
 const QString code("document.getElementById('pagelet_bluebar').style.display = 'none'; \
 document.getElementsByClassName('ego_section')[0].style.display = 'none';");
 
-//------------------Klassen som hanterar inloggning och anmälan------------
+//------------------Class to handle hiding of the blue bar------------
 
 class timer : public QTimer{
 public:
@@ -33,13 +33,6 @@ public:
 protected:
     void timerEvent(QTimerEvent *){
     	auto apa = runScript("document.readyState");
-//    	auto bepa = runScript("document.URL");
-//
-//    	qDebug() << apa.toString() << " " << bepa.toString() ;
-
-
-
-
     	if(apa.toString().compare("complete") == 0 ){
 
     		if (runScript("document.getElementById('stream_pagelet') != null") == "true") {
